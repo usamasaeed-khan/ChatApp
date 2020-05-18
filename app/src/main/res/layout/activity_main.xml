@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!-- Used for multiple app bars one for the title and other one for fragment titles-->
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/app_bar_layout"
+            android:layout_height="wrap_content">
+
+        <!-- The tool bar used for the title -->
+        <include layout="@layout/app_bar_layout"
+                 android:id="@+id/main_page_toolbar"/>
+
+        <!-- Used for the titles of tabs for each fragment -->
+        <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tab_layout"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+                android:layout_height="wrap_content">
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- The page that displays the contents of the fragments -->
+    <!-- It is below the tab for titles and app bar -->
+    <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_below="@id/app_bar_layout"
+            android:id="@+id/view_pager"
+            android:layout_height="wrap_content">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

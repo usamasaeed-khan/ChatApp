@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+    <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/purple"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"/>
+
+    <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to ChatApp!"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:paddingTop="200dp"
+            android:gravity="center_horizontal"
+            android:textSize="50sp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALREADY HAVE AN ACCOUNT?"
+            android:layout_below="@id/welcome_text"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="#ADFF2F"
+            android:id="@+id/loginBtn"
+    />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#dc143c"
+            android:text="DON'T HAVE AN ACCOUNT?"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/loginBtn"
+            android:id="@+id/registerBtn"/>
+
+</RelativeLayout>
